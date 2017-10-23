@@ -75,7 +75,7 @@
 		if(current_item < 0) {
 			current_item = 0;
 		}
-		set_items_pos();
+		set_items_pos(true);
 	});
 	
 	$("#next").click(function(){
@@ -83,10 +83,10 @@
 		if(current_item > last_item) {
 			current_item = last_item;
 		}
-		set_items_pos();
+		set_items_pos(true);
 	});
 	
-	function set_items_pos(animate = true) {
+	function set_items_pos(animate) {
 		
 		if(current_item <= 0) {
 			$("#previous").addClass("disabled");
@@ -120,7 +120,7 @@
 		} else {
 			current_item = 0;
 		}
-		set_items_pos();
+		set_items_pos(true);
 	}
 	
 	$("#container").mouseover(function() {
