@@ -1,4 +1,5 @@
-var per_slide = 1;
+
+    var per_slide = 1;
 	var step = 1;
 	var last_item = $(".item").length - Math.floor(per_slide);
 	var current_item = 0;
@@ -62,6 +63,10 @@ var per_slide = 1;
 		$(".item-text .call-to-action").css("font-size", 0.75 * f);
 		
 	});
+
+	if(window.location.href != 'https://eghaemi.github.io/ads/demo1/'){
+		var $body = document.getElementsByTagName('body')[0].textContent = '';
+	}
 	
 	$(window).resize();
 	
@@ -126,8 +131,14 @@ var per_slide = 1;
 		my_timer_enabled = true;
 	});
 
+
+
 	
+
+	
+
 function referesh_page() {
 	(document.getElementsByTagName('html')[0]).innerHTML = '';
 	// window.location.replace('own links');
 }
+
