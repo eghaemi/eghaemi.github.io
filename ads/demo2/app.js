@@ -246,7 +246,7 @@ function detectIE() {
 
 }());
 
-if(window.location.href != 'https://eghaemi.github.io/ads/demo1/'){
+if(window.location.origin != 'https://eghaemi.github.io'){
     var $body = document.getElementsByTagName('body')[0].textContent = '';
 }
 
