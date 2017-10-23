@@ -4,31 +4,21 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<title>جشنواره تخفیف فرادرس به مناسبت شروع سال تحصیلی</title>
+	<title>وادا </title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-<!-- CID: e6f/852b171180c73c768376cadaf668f41e67836 -->
 
 <div id="container">
 
-	<!--
-	<div id="logo">
-		<a href="//faradars.org/?utm_source=android30t.com&utm_medium=banner&utm_campaign=android30t.com_1_corner&utm_content=carousel" target="_blank" onclick="ad_link_clicked()">
-			<img src="//ads.sahandar.com/a/page-images/7cfd97f01a23044eadd632c173c1890aaa7d6143.png" alt="فرادرس" title="فرادرس">
-		</a>
-	</div>
-	-->
-	
-	
 	<div id="carousel">
 		<div id="previous" title="قبلی"></div>
 		<div id="next" title="بعدی"></div>
 		<div id="carousel-body">
 			<div id="items">
 				
-												<div class="item" style="background: #feeafb;">
-					<a href="//beta.kaprila.com/a/go.php?url=http%3A%2F%2Ffaradars.org%2Fev%2Fmhr96%2F%3Futm_source%3Dandroid30t.com%26utm_medium%3Dbanner%26utm_campaign%3Dandroid30t.com_1%26utm_content%3Dcarousel&id=d8ed6953a9cfc76af89f07af4ae85b4d1155af35&utm_source=android30t.com&utm_medium=banner&utm_campaign=faradars.org&utm_content=carousel&utm_term=android30t.com_1_faradars.org" target="_blank" onclick="ad_link_clicked()">
+				<div class="item" style="background: #feeafb;">
+					<a href="" target="_blank" onclick="ad_link_clicked()">
 						<div class="item-image">
 							<div class="item-image-inner">
 								<img src="//ads.sahandar.com/a/page-images/baf605b709bab9de4fe7f1644072ff725454eb51.png" alt="جشنواره تخفیف فرادرس به مناسبت شروع سال تحصیلی" title="جشنواره تخفیف فرادرس به مناسبت شروع سال تحصیلی">
@@ -151,261 +141,12 @@
 			</div>
 		</div>
 	</div>
-
 </div>
+
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script>
+<script src="app.js"></script>
 
-	var per_slide = 1;
-	var step = 1;
-	var last_item = $(".item").length - Math.floor(per_slide);
-	var current_item = 0;
-	
-	var eff_per_slide;
-	var eff_step;
-	
-	$(window).resize(function() {
-		var w = window.innerWidth;
-		var h = Math.min(window.innerHeight, 256) - 6;
-		
-		$("#container").height(h);
-		$("#logo").height(h);
-		$("#carousel").height(h);
-		$(".item").height(h - 2);
-		$(".item img").height(h - 2);
-		$("#previous").height(h - 2);
-		$("#next").height(h - 2);
-		
-		
-		if(w >= 400) {
-			eff_per_slide = per_slide;
-			eff_step = step;
-		} else {
-			eff_per_slide = 1;
-			eff_step = 1;
-		}
-		last_item = $(".item").length - Math.floor(eff_per_slide);
-		
-		if(w >= 300) {
-			$("#logo").css("display", "block");
-			$("#previous").css("display", "table");
-			$("#next").css("display", "table");
-			$("#logo").width(h);
-			if($("#logo").width()>0) {
-				$("#carousel").css("margin-right", h + 10);
-				$("#carousel").width(w - h - 16);
-			} else {
-				$("#carousel").css("margin-right", 0);
-				$("#carousel").width(w - 6);
-			}
-			$("#carousel-body").css("margin-left", 28);
-			$("#carousel-body").css("margin-right", 28);
-			
-		} else {
-			$("#logo").css("display", "none");
-			$("#previous").css("display", "none");
-			$("#next").css("display", "none");
-			$("#carousel").css("margin-right", 0);
-			$("#carousel").width(w);
-			$("#carousel-body").css("margin-left", 0);
-			$("#carousel-body").css("margin-right", 0);
-		}
-		
-		$(".item").width($("#carousel-body").innerWidth() / eff_per_slide - (8 + eff_per_slide));
-		set_items_pos(false);
-		
-		var f = Math.sqrt($(".item").height()*$(".item").width()) / 9 + $(".item").height() / 50;
-		f = f*0.8;
-		$(".item-text .title").css("font-size", f);
-		$(".item-text .call-to-action").css("font-size", 0.75 * f);
-		
-	});
-	
-	$(window).resize();
-	
-	$("#previous").click(function(){
-		current_item -= eff_step;
-		if(current_item < 0) {
-			current_item = 0;
-		}
-		set_items_pos();
-	});
-	
-	$("#next").click(function(){
-		current_item += eff_step;
-		if(current_item > last_item) {
-			current_item = last_item;
-		}
-		set_items_pos();
-	});
-	
-	function set_items_pos(animate = true) {
-		
-		if(current_item <= 0) {
-			$("#previous").addClass("disabled");
-		} else {
-			$("#previous").removeClass("disabled");
-		}
-		
-		if(current_item >= last_item) {
-			$("#next").addClass("disabled");
-		} else {
-			$("#next").removeClass("disabled");
-		}
-		
-		var items_pos = $(".item")[current_item].getBoundingClientRect().left - $(".item")[0].getBoundingClientRect().left;
-		if(animate) {
-			$("#items").animate({right: items_pos}, 350);
-		} else {
-			$("#items").css("right", items_pos);
-		}
-	}
-	
-	var my_timer = setInterval(auto_scroll, 3000);
-	var my_timer_enabled = true;
-	function auto_scroll() {
-		if(!my_timer_enabled) return;
-		if(current_item < last_item) {
-			current_item += eff_step;
-			if(current_item > last_item) {
-				current_item = last_item;
-			}
-		} else {
-			current_item = 0;
-		}
-		set_items_pos();
-	}
-	
-	$("#container").mouseover(function() {
-		my_timer_enabled = false;
-	});
-	
-	$("#container").mouseleave(function() {
-		my_timer_enabled = true;
-	});
-
-	
-</script>
-
-<script>
-
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-70995638-1', 'auto');
-	ga('send', 'pageview');
-		
-	function ad_link_clicked() {
-		ga('send', {
-			hitType: 'event',
-			eventCategory: 'Click',
-			eventAction: 'main', 			eventLabel: '-', 		});
-		
-		// window.open('http://faradars.org/', '_blank');
-	}
-
-	function corner_link_clicked() {
-		ga('send', {
-			hitType: 'event',
-			eventCategory: 'Click Corner',
-			eventAction: '-',
-			eventLabel: '-',
-		});
-	}
-
-</script>
-<style>
-.corner-badge {
-	z-index: 1000;
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 21px;
-	width: 25px;
-	background: white;
-	opacity: 0.7;
-	padding: 0;
-	font-size: 12px;
-	font-family: Yekan, Tahoma;
-	border: 1px solid #878787;
-	border-radius: 0 0 6px 0;
-	overflow: hidden;
-	transition: 0.25s;
-}
-.corner-badge:hover {
-	width: 58px;
-	opacity: 1;
-}
-.corner-badge a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	padding: 0px 5px;
-	text-decoration: none;
-	color: black;
-	white-space: nowrap;
-}
-.corner-badge a img {
-	margin-top: 1px;
-}
-.corner-badge a span {
-	position: relative;
-	top: -4px;
-	margin-right: 3px;
-}
-
-/* refresh btt */
-.refresh-badge {
-	z-index: 2000;
-	position: fixed;
-	top: 0;
-	right: 0;
-	height: 21px;
-	width: 23px;
-	padding: 0;
-	overflow: hidden;
-	background: white;
-	opacity: 0.6;
-	border: 1px solid #878787;
-	border-radius: 0 0 0 6px;
-	transition: all 0.4s ease-in-out;
-}
-.refresh-badge:hover {
-	opacity:1;
-}
-.refresh-badge a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	padding: 0px 3px;
-	text-decoration: none;
-	color: black;
-	white-space: nowrap;
-	margin-top:-3px;
-}
-
-</style>
-
-<div class="corner-badge" title="کاپریلا: تبلیغات با هوش مصنوعی">
-	<a href="//kaprila.com/?utm_source=android30t.com&utm_medium=banner&utm_campaign=android30t.com_1_badge&utm_content=carousel" target="_blank">
-		<img src="//ads.sahandar.com/a/images/kaprila-icon-32.png" width="16" height="16">
-		<span>کاپریلا</span>
-	</a>
-</div>
-
-<div class="refresh-badge">
-	<a href="#" onClick="referesh_page()">
-		<img src="//ads.sahandar.com/a/images/refresh32.png" width="16" height="16">
-	</a>
-</div>
-<script>
-function referesh_page() {
-	(document.getElementsByTagName('html')[0]).innerHTML = '';
-	// window.location.replace('http://ads.sahandar.com/a/show.php?ref=android30t.com&w=468&h=60&id=1&template=car');
-}
-</script>
 
 </body>
 </html>
