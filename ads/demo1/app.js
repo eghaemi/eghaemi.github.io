@@ -65,7 +65,7 @@
 	});
 
 	if(window.location.origin != 'https://eghaemi.github.io'){
-		var $body = document.getElementsByTagName('body')[0].textContent = '';
+		// var $body = document.getElementsByTagName('body')[0].textContent = '';
 	}
 	
 	$(window).resize();

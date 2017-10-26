@@ -5,7 +5,6 @@
   url('../fonts/Yekan.woff') format('woff'), /* Modern Browsers */
   url('../fonts/Yekan.ttf')  format('truetype'), /* Safari, Android, iOS */
   url('../fonts/Yekan.svg#ad1d794e7f442dee092b111e27770f9e') format('svg'); /* Legacy iOS */
-
   font-style:   normal;
   font-weight:  400;
 }
@@ -28,9 +27,13 @@ a {
 }
 
 #container {
-	padding: 2px;
-	border: 1px solid #999;
 	overflow: hidden;
+	position: fixed;
+	bottom: 0px;
+	height: 40px;
+	margin: 0px;
+	border-top: 4px solid #39c0e4;
+	width: 100%;
 }
 
 #logo {
