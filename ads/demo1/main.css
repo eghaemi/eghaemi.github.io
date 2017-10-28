@@ -32,7 +32,6 @@ a {
 	bottom: 0px;
 	height: 40px;
 	margin: 0px;
-	border-top: 4px solid #39c0e4;
 	width: 100%;
 }
 
@@ -63,6 +62,8 @@ a {
 	cursor: pointer;
 	display: table;
 	text-align: center;
+	background: #039b45;
+	color: white;
 }
 
 #carousel #previous {
@@ -87,8 +88,8 @@ a {
 }
 
 #carousel #previous:hover:not(.disabled), #carousel #next:hover:not(.disabled) {
-	background: #ddd;
-	border: 1px solid #ccc;
+	background: #0dd062;
+	border: 1px solid #ccc;	
 }
 
 #carousel #previous.disabled, #carousel #next.disabled {
@@ -165,9 +166,9 @@ a {
 }
 
 .item-text .call-to-action {
-	border-radius: 7px;
-	border: 1px solid #861a1a;
-	color: #e16a5b;
+	border-radius: 6px;
+	border: 4px solid #039b45;
+	color: #039b45;
 	background: white;
 	padding: 2px 4px 4px 4px;
 	line-height: 130%;
@@ -177,7 +178,7 @@ a {
 
 .item:hover .item-text .call-to-action {
 	color: white;
-	background: #de3a3a;
+	background: #039b45;
 }
 
 .prefix {
