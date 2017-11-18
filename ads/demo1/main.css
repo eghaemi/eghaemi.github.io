@@ -132,7 +132,7 @@ a {
 
 .item-image {
 	height: 100%;
-	width: 25%;
+	width: 100%;
 	float: right;
 	display: table;
 }
@@ -145,7 +145,7 @@ a {
 }
 
 .item-image img {
-	object-fit: cover;
+	_object-fit: cover;
 	width: 100%;
 	border-radius: 0 9px 9px 0;
 }
