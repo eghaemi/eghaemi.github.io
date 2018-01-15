@@ -82,7 +82,7 @@ input:checked + label .button_spots:nth-of-type(0) {
   opacity: 0;
   padding: 4.25px !important;
   -webkit-animation: spew 1s 0.3s forwards, rotate 4.3s 1.45s linear infinite, final 0.2s 4s forwards, spot-0 0.7s 10.84444s linear infinite !important;
-          animation: spew 1s 0.3s forwards, rotate 4.3s 1.45s linear infinite, final 0.2s 4s forwards, spot-0 0.7s 10.84444s linear infinite !important;
+
 }
 input:checked + label .button_spots:nth-of-type(1) {
   top: 6px !important;

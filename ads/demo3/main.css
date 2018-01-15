@@ -26,10 +26,10 @@
     width: 0;
   }
 }
-.box-ea12alfa .photo, .box-ea12alfa .content {
+.box-ea12alfa .photo-ea12alfa, .box-ea12alfa .content-ea12alfa {
   box-sizing: border-box;
 }
-.box-ea12alfa .photo {
+.box-ea12alfa .photo-ea12alfa {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -45,10 +45,10 @@
     transform: rotate(-360deg);
   }
 }
-.box-ea12alfa .photo img {
+.box-ea12alfa .photo-ea12alfa img {
   width: 100%;
 }
-.box-ea12alfa .content {
+.box-ea12alfa .content-ea12alfa {
   padding: 10px;
   overflow: hidden;
   position: absolute;
@@ -57,7 +57,7 @@
   top: 0;
   left: 0;
 }
-.box-ea12alfa .content::before {
+.box-ea12alfa .content-ea12alfa::before {
   content: "";
   position: absolute;
   width: 230px;
@@ -68,17 +68,17 @@
   z-index: -1;
   transform: rotate(-8deg);
 }
-.box-ea12alfa .content .text {
-  margin-top: 20px;
+.box-ea12alfa .content-ea12alfa .text-ea23alfa {
+  margin-top: 10px;
   margin-left: 50px;
 }
-.box-ea12alfa .content .text h3, .box-ea12alfa .content .text h6 {
+.box-ea12alfa .content-ea12alfa .text-ea23alfa h3, .box-ea12alfa .content-ea12alfa .text-ea23alfa h6 {
   font-weight: normal;
   margin: 3px 0;
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
-.box-ea12alfa .content .btn {
+.box-ea12alfa .content-ea12alfa .btn {
   background-color: #abc;
   width: 50px;
   height: 50px;
@@ -89,7 +89,7 @@
   z-index: 1;
   cursor: pointer;
   transition-duration: 0.3s;
-  animation: pop-btn 0.3s both ease-in-out 0.5s;
+  transform: rotate(90deg);
 }
 @keyframes pop-btn {
   0% {
@@ -102,10 +102,10 @@
     transform: scale(1);
   }
 }
-.box-ea12alfa .content .btn:hover {
+.box-ea12alfa .content-ea12alfa .btn:hover {
   box-shadow: 0 0 0 5px rgba(170, 187, 204, 0.5);
 }
-.box-ea12alfa .content .btn span {
+.box-ea12alfa .content-ea12alfa .btn span {
   width: 60%;
   height: 2px;
   position: absolute;
@@ -115,7 +115,7 @@
   transform: translateY(-50%);
   animation: to-hamburger 0.3s forwards ease-in-out;
 }
-.box-ea12alfa .content .btn span::before, .box-ea12alfa .content .btn span::after {
+.box-ea12alfa .content-ea12alfa .btn span::before, .box-ea12alfa .content-ea12alfa .btn span::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -125,23 +125,23 @@
   transform: rotate(0deg);
   right: 0;
 }
-.box-ea12alfa .content .btn span::before {
+.box-ea12alfa .content-ea12alfa .btn span::before {
   margin-top: -7px;
 }
-.box-ea12alfa .content .btn span::after {
+.box-ea12alfa .content-ea12alfa .btn span::after {
   margin-top: 7px;
 }
-.box-ea12alfa .content .btn.active span {
+.box-ea12alfa .content-ea12alfa .btn.active span {
   animation: to-arrow 0.3s forwards ease-in-out;
 }
-.box-ea12alfa .content .btn.active span::before, .box-ea12alfa .content .btn.active span::after {
+.box-ea12alfa .content-ea12alfa .btn.active span::before, .box-ea12alfa .content-ea12alfa .btn.active span::after {
   width: 60%;
   right: -1px;
 }
-.box-ea12alfa .content .btn.active span::before {
+.box-ea12alfa .content-ea12alfa .btn.active span::before {
   transform: rotate(45deg);
 }
-.box-ea12alfa .content .btn.active span::after {
+.box-ea12alfa .content-ea12alfa .btn.active span::after {
   transform: rotate(-45deg);
 }
 @keyframes to-hamburger {
@@ -222,8 +222,8 @@
   left: -375px;
 }
 
-.box-ea12alfa .content .text h3, .box-ea12alfa .content .text h6 {
+.box-ea12alfa .content-ea12alfa .text-ea23alfa h3, .box-ea12alfa .content-ea12alfa .text-ea23alfa h6 {
   direction: rtl;
-  font-family: "Samim";
+  font-family: "Samim", wdyekan,calibri,tahoma,sans-serif;
   margin-right: 100px;
 }
