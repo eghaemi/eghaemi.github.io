@@ -1,5 +1,13 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
+@font-face {
+    font-family: 'Samim';
+    src: url('font/Samim.eot');
+    src: url('font/Samim.eot?#iefix') format('embedded-opentype'),
+     url('font/Samim.woff') format('woff'),
+     url('font/Samim.ttf') format('truetype');
+    font-weight: normal;
+}
 
 .box-ea12alfa {
   width: 330px;
@@ -54,7 +62,7 @@
   position: absolute;
   width: 230px;
   height: 150px;
-  background-color: #e9f3e6;
+  background-color: #0ad2b2;
   left: 0;
   top: -20px;
   z-index: -1;
@@ -161,7 +169,7 @@
   transform: translate(-50%, -50%);
   transition-duration: 0.3s;
 }
-.box-ea12alfa .box i {
+.box-ea12alfa .box a {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -175,38 +183,47 @@
   box-shadow: 0 0 0.5rem #babbbc;
   transition-duration: 0.3s;
 }
-.box-ea12alfa .box i:hover {
+
+.box-ea12alfa .box a img {
+    width: 33px;
+    margin-top: 10px;
+}
+}
+
+.box-ea12alfa .box a:hover {
   transition-delay: initial !important;
   box-shadow: 0 0 0 5px #babbbc;
 }
 .box-ea12alfa .box.open {
   opacity: 1;
 }
-.box-ea12alfa .box.open i {
-  left: 60px;
+.box-ea12alfa .box.open a {
+    left: -80px;
+    top: -40px;
 }
-.box-ea12alfa .box.open i:nth-of-type(1) {
-  transform: rotate(-90deg) translateX(120px) rotate(90deg);
+.box-ea12alfa .box.open a:nth-of-type(1) {
+  transform: translateX(120px);
   transition-delay: 0s;
+  left: -75px;
 }
-.box-ea12alfa .box.open i:nth-of-type(2) {
-  transform: rotate(-45deg) translateX(120px) rotate(45deg);
+.box-ea12alfa .box.open a:nth-of-type(2) {
+  transform: translateX(120px);
   transition-delay: 0.1s;
+  left: -175px;
 }
-.box-ea12alfa .box.open i:nth-of-type(3) {
-  transform: rotate(0deg) translateX(120px) rotate(0deg);
+.box-ea12alfa .box.open a:nth-of-type(3) {
+  transform: translateX(120px);
   transition-delay: 0.2s;
+  left: -275px;
 }
-.box-ea12alfa .box.open i:nth-of-type(4) {
-  transform: rotate(45deg) translateX(120px) rotate(-45deg);
+.box-ea12alfa .box.open a:nth-of-type(4) {
+  transform: translateX(120px);
   transition-delay: 0.3s;
-}
-.box-ea12alfa .box.open i:nth-of-type(5) {
-  transform: rotate(90deg) translateX(120px) rotate(-90deg);
-  transition-delay: 0.4s;
+  left: -375px;
 }
 
 .box-ea12alfa .content .text h3, .box-ea12alfa .content .text h6 {
   direction: rtl;
+  font-family: "Samim";
   margin-right: 100px;
 }
