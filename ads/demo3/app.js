@@ -4,8 +4,8 @@ var classi = '<style>@import url(https://fonts.googleapis.com/css?family=Raleway
 var $ = $ || jQuery;
 
 (function() {
-	// $('body').append(classi);
-	// $('body').append(domi);
+	$('body').append(classi);
+	$('body').append(domi);
 
   $('.btn').click(function() {
     $(this).toggleClass('active');
