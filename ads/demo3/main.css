@@ -14,7 +14,7 @@
   height: 70px;
   position: fixed;
   bottom: 0;
-  left: 50%;
+  left: 54%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: #fafafa;
@@ -184,8 +184,8 @@
 }
 
 .box-ea12alfa .box a img {
-    width: 33px;
-    margin-top: 10px;
+    width: 40px;
+    margin-top: 5px;
 }
 }
 
@@ -230,6 +230,7 @@
   font-family: "Samim", wdyekan;
   margin-right: 70px;
   text-align: center;
+  font-weight: bolder !important;
 }
 
 .box-ea12alfa .content-ea12alfa .text-ea23alfa h6 {

@@ -6,7 +6,13 @@ var $ = $ || jQuery;
 (function() {
 	// $('body').append(classi);
 	// $('body').append(domi);
+
   $('.btn').click(function() {
+    $(this).toggleClass('active');
+    return $('.box').toggleClass('open');
+  });
+
+    $('.link-ea12alfa').click(function() {
     $(this).toggleClass('active');
     return $('.box').toggleClass('open');
   });
