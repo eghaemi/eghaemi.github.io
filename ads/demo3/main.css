@@ -11,6 +11,7 @@
   box-shadow: 0 0 2rem #babbbc;
   animation: show-box-ea12alfa 0.5s forwards ease-in-out;
   margin-bottom: -32px;
+  z-index: 99999;
 }
 @keyframes show-box-ea12alfa {
   0% {
