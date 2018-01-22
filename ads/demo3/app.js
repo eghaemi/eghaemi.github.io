@@ -5,9 +5,9 @@ var $ = $ || jQuery;
 
 
 (function() {
-	if ($(window).width() < 480 || $(window).height() < 480) {
-		$('body').append(classi);
-		$('body').append(domi);
+	if ($(window).width() < 480 || $(window).height() < 480 || true) {
+		// $('body').append(classi);
+		// $('body').append(domi);
 
 		  $('.btn').click(function() {
 		    $(this).toggleClass('active');
